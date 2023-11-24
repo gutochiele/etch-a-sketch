@@ -6,3 +6,11 @@
         document.getElementById('board').appendChild(divBoard);
     }
 }
+
+const grid = document.querySelectorAll('.grid');
+
+grid.forEach((gridItem) => {
+  gridItem.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = 'black';
+  });
+});
