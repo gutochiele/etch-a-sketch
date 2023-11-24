@@ -1,0 +1,33 @@
+#board,
+body{
+    display: flex;
+    justify-content: center
+}
+
+body{
+    background-color: rgb(114, 169, 218);
+}
+
+#board{
+    flex-wrap: wrap;
+    max-width: 450px;
+    min-width: 450px;
+    min-height: 450px;
+    flex: 1 0;
+    margin-top: 50px;
+    /* border-radius: 8%;
+    border: 25px solid red; */
+
+}
+
+.grid{
+    min-height: 25px;
+    min-width: 25px;
+    border: 1px solid black;
+    background-color: white ;
+}
+
+.grid:hover{
+    background-color: black;
+}
+
