@@ -1,30 +1,43 @@
 #board,
-body{
+#boardSection{
     display: flex;
-    justify-content: center
+    justify-content: center;
+}
+
+.btn,
+.rstBtn{
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 body{
     background-color: rgb(114, 169, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
 }
 
 #board{
     flex-wrap: wrap;
-    max-width: 450px;
-    min-width: 450px;
-    min-height: 450px;
+    width: 450px;
+    height: 450px;
     flex: 1 0;
-    margin-top: 50px;
-    /* border-radius: 8%;
-    border: 25px solid red; */
+    margin-top: 25px;
+    border-radius: 8%;
+    border: 25px solid red;
+    align-content: stretch;
+    justify-content: space-evenly;
 
 }
 
 .grid{
-    flex: 1 0 calc(100% / 16);
-    height: calc(100% / 16);
+    flex: 1 1 calc(100% / 32); 
+    height: calc(100% / 32);
     border: 1px solid black;
-    background-color: white ;
+    background-color: white;
     box-sizing: border-box;
-    
+    aspect-ratio: 1/1;
+
 }   
