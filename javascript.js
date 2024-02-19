@@ -27,15 +27,34 @@ grid.forEach((gridItem) => {
 }
 startPad(gridX, gridY)
 
-const btn = document.querySelector('.btn')
+// const btn = document.querySelector('.btn')
+// 
+// btn.addEventListener('click', () => {
+//   const userInput = prompt('How many elements per line in your grid? (max 100)');
+//   if (userInput !== null && userInput !== '' && userInput <= 100) {
+//     gridX = gridY = userInput;
+//     startPad(gridX, gridY);
+// }
+// })
 
-btn.addEventListener('click', () => {
-  const userInput = prompt('How many elements per line in your grid? (max 100)');
-  if (userInput !== null && userInput !== '' && userInput <= 100) {
-    gridX = gridY = userInput;
-    startPad(gridX, gridY);
+const slider = document.querySelector('#changeGrid');
+const gridValue = document.querySelector('.gridValue');
+gridValue.innerHTML = "16 x 16";
+
+
+function handleUpdate(){
+  const userInput = slider.value;
+  gridX = gridY = userInput;
+  startPad(gridX, gridY);
+  gridValue.innerHTML = slider.value + " x " + slider.value;
 }
-})
+
+function updateInputText(){
+  gridValue.innerHTML = slider.value + " x " + slider.value;
+}
+
+slider.addEventListener('change', handleUpdate);
+slider.addEventListener('mousemove', updateInputText);
 
 const rstBtn = document.querySelector('.rstBtn')
 rstBtn.addEventListener('click', () => {

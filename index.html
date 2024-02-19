@@ -9,7 +9,8 @@
 <body>
     <h1>This is the Etch-a-Sketch Projetct!</h1>
     <div class="btnContainer">
-        <button class="btn">Change grid</button>
+        <label for="changeGrid">GRID: <span class="gridValue"></span></label>
+        <input id="changeGrid" type="range" name="changeGrid" min="2" max="100" value="16">
         <button class="rstBtn">Reset</button>
     </div>
     <div id="boardSection">
